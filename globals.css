@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: 22, 163, 74;
+  --secondary: 220, 252, 231;
+  --accent: 22, 101, 52;
+  --background: 240, 253, 244;
+  --text: 55, 65, 81;
+}
+
+body {
+  background-color: rgb(var(--background));
+  color: rgb(var(--text));
+}
+
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    color: rgb(var(--primary));
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-green-600 text-white hover:bg-green-700 transition-colors duration-300;
+  }
+  .btn-secondary {
+    @apply bg-green-100 text-green-800 hover:bg-green-200 transition-colors duration-300;
+  }
+}
+
